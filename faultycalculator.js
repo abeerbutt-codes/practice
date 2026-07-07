@@ -48,7 +48,14 @@
              c1.close();
              return;
      }
-     console.log("result", result)
+     console.log(`${a} ${operator}${b}=${result}`)
      console.log("random number is",random)
      c1.close()
  }
+ c1.question("enter first number", function(a){
+    c1.question("enter operator", function(operator){
+        c1.question("enetr second number",function(b){
+            faultycalculator(a, operator, b)
+        })
+    })
+ })
